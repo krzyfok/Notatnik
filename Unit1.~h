@@ -40,6 +40,8 @@ __published:	// IDE-managed Components
         void __fastcall Zapiszjako1Click(TObject *Sender);
         void __fastcall Zapisz1Click(TObject *Sender);
         void __fastcall Otwrz1Click(TObject *Sender);
+        void __fastcall tekstKeyDown(TObject *Sender, WORD &Key,
+          TShiftState Shift);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

@@ -27,6 +27,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    OnKeyDown = tekstKeyDown
   end
   object MainMenu1: TMainMenu
     Left = 592

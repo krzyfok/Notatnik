@@ -84,3 +84,20 @@ void __fastcall TForm1::Otwrz1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::tekstKeyDown(TObject *Sender, WORD &Key,
+      TShiftState Shift)
+{
+      if(Shift.Contains(ssCtrl))
+      {
+        if((Key=='s') || (Key == 'S'))
+        {
+                Form1-> Zapisz1Click(MainMenu1);
+        }
+        if((Key=='n') || (Key == 'N'))
+        {
+                Form1-> Otwrz1Click(MainMenu1);
+        }
+      }
+}
+//---------------------------------------------------------------------------
+
