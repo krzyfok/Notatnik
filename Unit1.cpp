@@ -101,3 +101,36 @@ void __fastcall TForm1::tekstKeyDown(TObject *Sender, WORD &Key,
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::Zakocz1Click(TObject *Sender)
+{    const int wynik = Application->MessageBox("Czy chcesz zapisaæ program?","PotwierdŸ",MB_YESNOCANCEL | MB_ICONQUESTION);
+        switch (wynik)
+        {
+        case IDYES:
+
+        Form1-> Zapisz1Click(MainMenu1);
+          Application->Terminate();
+                break;
+        case IDNO:
+              Application->Terminate();
+              break;
+       }
+    }
+
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
+{
+      const int wynik = Application->MessageBox("Czy chcesz zapisaæ program?","PotwierdŸ",MB_YESNOCANCEL | MB_ICONQUESTION);
+        switch (wynik)
+        {
+        case IDYES:
+              Form1-> Zapisz1Click(MainMenu1);
+                break;
+        case IDCANCEL:
+              Action=caNone;
+              break;
+        }
+    }
+//---------------------------------------------------------------------------
+

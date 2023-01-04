@@ -12,6 +12,7 @@ object Form1: TForm1
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object tekst: TMemo
@@ -55,6 +56,7 @@ object Form1: TForm1
       end
       object Zakocz1: TMenuItem
         Caption = 'Zako'#324'cz'
+        OnClick = Zakocz1Click
       end
     end
     object Edycja1: TMenuItem

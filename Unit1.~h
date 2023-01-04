@@ -42,6 +42,8 @@ __published:	// IDE-managed Components
         void __fastcall Otwrz1Click(TObject *Sender);
         void __fastcall tekstKeyDown(TObject *Sender, WORD &Key,
           TShiftState Shift);
+        void __fastcall Zakocz1Click(TObject *Sender);
+        void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);
