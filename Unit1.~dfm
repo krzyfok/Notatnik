@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 1296
-  Top = 254
+  Left = 1311
+  Top = 287
   Width = 884
   Height = 457
   Caption = 'Notatnik'
@@ -27,6 +27,7 @@ object Form1: TForm1
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
+    ScrollBars = ssVertical
     TabOrder = 0
     OnKeyDown = tekstKeyDown
   end
@@ -63,21 +64,27 @@ object Form1: TForm1
       Caption = '&Edycja'
       object Wytnij1: TMenuItem
         Caption = 'Wytnij'
+        OnClick = Wytnij1Click
       end
       object Kopiuj1: TMenuItem
         Caption = 'Kopiuj'
+        OnClick = Kopiuj1Click
       end
       object Wklej1: TMenuItem
         Caption = 'Wklej'
+        OnClick = Wklej1Click
       end
     end
     object Wyswietl1: TMenuItem
       Caption = '&Format'
       object Zawijaniewierszy1: TMenuItem
         Caption = 'Zawijanie wierszy'
+        Checked = True
+        OnClick = Zawijaniewierszy1Click
       end
       object Czcionka1: TMenuItem
         Caption = 'Czcionka'
+        OnClick = Czcionka1Click
       end
     end
     object Pomoc1: TMenuItem
@@ -105,6 +112,17 @@ object Form1: TForm1
     Filter = 'Plik Tekstowy(txt)|*.txt|Dowolony plik|*.*'
     Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
     Left = 680
+    Top = 40
+  end
+  object FontDialog1: TFontDialog
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 720
     Top = 40
   end
 end

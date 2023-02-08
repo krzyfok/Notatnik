@@ -134,3 +134,53 @@ void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
     }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::Wytnij1Click(TObject *Sender)
+{
+        tekst -> CutToClipboard();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Kopiuj1Click(TObject *Sender)
+{
+        tekst -> CopyToClipboard();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Wklej1Click(TObject *Sender)
+{
+     tekst->PasteFromClipboard();
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm1::Zawijaniewierszy1Click(TObject *Sender)
+{
+        if(Zawijaniewierszy1->Checked==true)
+        {
+            Zawijaniewierszy1->Checked=false;
+            tekst->WordWrap=false;
+            tekst->ScrollBars =ssBoth;
+        }
+        else
+        {
+                Zawijaniewierszy1->Checked=true;
+                tekst->WordWrap=true;
+                tekst->ScrollBars=ssVertical;
+        }
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm1::Czcionka1Click(TObject *Sender)
+{
+        if(FontDialog1->Execute())
+        {
+          tekst->Font->Name = FontDialog1->Font->Name;
+          tekst->Font->Color=FontDialog1->Font->Color;
+          tekst->Font->Size=FontDialog1->Font->Size;
+          tekst->Font->Style=FontDialog1->Font->Style;}
+}
+//---------------------------------------------------------------------------
+
