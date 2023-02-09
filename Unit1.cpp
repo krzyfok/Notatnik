@@ -4,6 +4,7 @@
 #pragma hdrstop
 
 #include "Unit1.h"
+#include "Unit2.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -184,3 +185,16 @@ void __fastcall TForm1::Czcionka1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::Autor1Click(TObject *Sender)
+{
+    Form2-> ShowModal();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::GitHuB1Click(TObject *Sender)
+{
+     ShellExecute(NULL, "open", "https://github.com/krzyfok ", NULL, NULL, SW_SHOWNORMAL);
+}
+//---------------------------------------------------------------------------
+                                                                                

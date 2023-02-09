@@ -32,7 +32,6 @@ __published:	// IDE-managed Components
         TMenuItem *Informacje1;
         TMenuItem *Autor1;
         TMenuItem *GitHuB1;
-        TMenuItem *Oprogramie1;
         TMemo *tekst;
         TOpenDialog *OpenDialog1;
         TSaveDialog *SaveDialog1;
@@ -50,6 +49,8 @@ __published:	// IDE-managed Components
         void __fastcall Wklej1Click(TObject *Sender);
         void __fastcall Zawijaniewierszy1Click(TObject *Sender);
         void __fastcall Czcionka1Click(TObject *Sender);
+        void __fastcall Autor1Click(TObject *Sender);
+        void __fastcall GitHuB1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

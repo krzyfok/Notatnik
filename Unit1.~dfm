@@ -93,12 +93,11 @@ object Form1: TForm1
         Caption = 'Informacje'
         object Autor1: TMenuItem
           Caption = 'Autor'
+          OnClick = Autor1Click
         end
         object GitHuB1: TMenuItem
           Caption = 'Git Hub'
-        end
-        object Oprogramie1: TMenuItem
-          Caption = 'O programie'
+          OnClick = GitHuB1Click
         end
       end
     end
